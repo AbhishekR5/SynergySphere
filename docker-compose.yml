@@ -24,6 +24,15 @@ services:
       - odoo-web-data:/var/lib/odoo
       - ./addons:/mnt/extra-addons   # Your custom SynergySphere module
       - ./config:/etc/odoo
+    command: >
+      odoo -d odoo
+           -i base
+           --without-demo=all
+           --log-level=info
+           --db_host=db
+           --db_port=5432
+           --db_user=odoo
+           --db_password=odoo
 
   nginx:
     image: nginx:latest

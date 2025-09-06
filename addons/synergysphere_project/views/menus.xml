@@ -1,0 +1,11 @@
+<odoo>
+    <menuitem id="menu_synergy_root"
+              name="SynergySphere"
+              sequence="10"/>
+
+    <menuitem id="menu_synergy_projects"
+              name="Projects"
+              parent="synergysphere_project.menu_synergy_root"
+              action="synergysphere_project.action_synergy_projects"
+              sequence="20"/>
+</odoo>
